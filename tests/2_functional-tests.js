@@ -25,12 +25,11 @@ suite('chai fcc code input test ', function() {
 					let res1 = res.body;
 					deleteID = res.body._id;
 					assert.equal(res.status, 200);
-					assert.equal(res1.issue_title, 'the test');
+					assert.equal(res1['issue_title'], 'the test');
 					assert.equal(res1.issue_text, 'the text');
 					assert.equal(res1.created_by, 'created_by');
 					assert.equal(res1.assigned_to, 'assigned_to');
 					assert.equal(res1.status_text, 'status_text');
-					console.log(res.body);
 					done();
 				});
 		});

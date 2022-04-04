@@ -10,7 +10,7 @@ const db = require('./db/connection.js');
 const apiRoutes = require('./routes/api.js');
 const fccTestingRoutes = require('./routes/fcctesting.js');
 const runner = require('./test-runner');
-
+var tools;
 let app = express();
 db();
 app.use('/public', express.static(process.cwd() + '/public'));
